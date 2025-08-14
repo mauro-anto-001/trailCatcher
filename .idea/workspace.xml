@@ -4,22 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a7696815-9be7-4f95-8a56-4fdd48b04b18" name="Changes" comment="Finished Phase 1 of TrailCatcher. That is setting up Spring boot, configuring postgresql, building the user entity w/ crud, the run entity w/ crud, linking user and run with jpa, and testing request thru postman to ensure they work.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/ScheduleItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TrainingPlanController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/SignUpRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/PlanStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/ScheduleItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/TrainingPlan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/WorkoutType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/ScheduleItemRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/TrainingPlanRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/ScheduleItemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/TrainingPlanService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="a7696815-9be7-4f95-8a56-4fdd48b04b18" name="Changes" comment="Finished phase 2 of Trail Catcher, which was completing the training plan system. it included creating trainingplans and connecting them to their api endpoints. As well as creating a dynamic plan adjustment for missed days">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/config/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/CreateRunRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/RefreshToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/RefreshTokenRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/security/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/service/CurrentUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TrailCatcherApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TrailCatcherApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/RunController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/RunController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/TrainingPlanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TrainingPlanController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/SignUpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/SignUpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754264893717</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Finished phase 2 of Trail Catcher, which was completing the training plan system. it included creating trainingplans and connecting them to their api endpoints. As well as creating a dynamic plan adjustment for missed days">
+      <option name="closed" value="true" />
+      <created>1754636286396</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1754636286396</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -127,6 +139,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished Phase 1 of TrailCatcher. That is setting up Spring boot, configuring postgresql, building the user entity w/ crud, the run entity w/ crud, linking user and run with jpa, and testing request thru postman to ensure they work." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Phase 1 of TrailCatcher. That is setting up Spring boot, configuring postgresql, building the user entity w/ crud, the run entity w/ crud, linking user and run with jpa, and testing request thru postman to ensure they work." />
+    <MESSAGE value="Finished phase 2 of Trail Catcher, which was completing the training plan system. it included creating trainingplans and connecting them to their api endpoints. As well as creating a dynamic plan adjustment for missed days" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished phase 2 of Trail Catcher, which was completing the training plan system. it included creating trainingplans and connecting them to their api endpoints. As well as creating a dynamic plan adjustment for missed days" />
   </component>
 </project>

@@ -21,6 +21,15 @@ public class User {
     private UnitPreference unitPreference;
 
     private String goal; //e.g., "5k", "Marathon"
+    private String role = "ROLE_USER";
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
